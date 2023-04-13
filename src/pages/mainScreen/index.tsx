@@ -44,13 +44,14 @@ export function MainScreen() {
   }
 
   function deletePost(id: number) {
-    const filterPost = posts?.results.filter((post) => post.id !== id)
-    if (filterPost) {
+    if (posts) {
+      const filterPost = posts.results.filter((post) => post.id !== id)
       const newPosts: Posts = {
         ...posts,
         results: filterPost,
       }
       setPosts(newPosts)
+      console.log(newPosts)
     }
   }
 
