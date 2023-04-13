@@ -3,7 +3,6 @@ import { NewPostBox } from '../../components/NewPostBox'
 import { PostBox } from '../../components/PostBox'
 import './styles.scss'
 import { getPosts } from '../../actions/getPosts'
-import { useNavigate } from 'react-router-dom'
 
 interface Posts {
   count: number | undefined
@@ -23,13 +22,6 @@ export function MainScreen() {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const username = localStorage.getItem('codeLeapNetwork username') ?? ''
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (username === null) {
-      navigate('/')
-    }
-  }, [navigate, username])
 
   useEffect(() => {
     getPosts().then((response) => setPosts(response.data))

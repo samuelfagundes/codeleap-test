@@ -1,22 +1,10 @@
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 import './styles.scss'
 
 export function SignUpBox() {
   const [username, setUsername] = useState('')
-  const storedUsername = localStorage.getItem('codeLeapNetwork username')
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (storedUsername) {
-      navigate('/mainScreen')
-    }
-  }, [navigate, storedUsername])
-
   function handleSignIn() {
     localStorage.setItem('codeLeapNetwork username', JSON.stringify(username))
-
-    navigate('/mainScreen')
   }
 
   return (
