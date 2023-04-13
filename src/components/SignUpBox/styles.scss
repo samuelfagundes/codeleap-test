@@ -1,0 +1,51 @@
+.box {
+  width: 500px;
+  height: 205px;
+  background-color: var(--white);
+  border-radius: 16px;
+
+  padding: 1.5rem;
+
+  h1 {
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.usernameInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  input {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--gray-600);
+    border-radius: 8px
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin-top: 1rem;
+    background-color: var(--blue);
+    border: none;
+    font-weight: 700;
+    color: white;
+    padding: 0.425rem 1.875rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+
+    &:not(.disableButton):hover {
+      filter: brightness(1.15);
+    }
+  }
+}
+
+.disableButton {
+  background-color: var(--gray-600) !important;
+  cursor: not-allowed
+}

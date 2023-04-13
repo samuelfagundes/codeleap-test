@@ -1,0 +1,116 @@
+.editDialogOverlay {
+  background-color: var(--gray-600);
+  filter: opacity(70%);
+  position: fixed;
+  inset: 0;
+}
+
+.editDialogTrigger {
+  border: none;
+  background-color: inherit;
+  line-height: 0;
+
+  svg {
+    &:hover{
+      color: var(--blue);
+      filter: brightness(1.4);
+      cursor: pointer;
+    }
+  }
+}
+
+.editDialogContent {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 660px;
+}
+.editDialogContent:focus {
+  outline: none;
+}
+
+.editDialogTitle {
+  font-weight: 700;
+  padding: 2.3rem 1.5rem 0 !important;
+  color: black !important;
+  margin-bottom: 2.5rem;
+}
+
+.editDialogContent {
+  color: black
+}
+
+.editDialogForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    span {
+      font-size: 1rem;
+      line-height: 100%;
+    }
+
+    input {
+      padding: 0.5rem 0.625rem;
+      border: 1px solid var(--gray-600);
+      border-radius: 8px;
+    }
+
+    textarea {
+      resize: vertical;
+      width: 100% !important;
+      height: 74px;
+      padding: 0.5rem 0.625rem;
+      border: 1px solid var(--gray-600);
+      border-radius: 8px;
+    }
+  }
+}
+
+.editDialogButtons {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: flex-end;
+  gap: 1rem !important;
+}
+
+.editDialogCancelButton {
+  width: 120px;
+  height: 32px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--gray-500);
+  }
+}
+
+.editDialogSaveButton {
+  width: 120px;
+  height: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--green);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid var(--green);
+    color: var(--green)
+  }
+}

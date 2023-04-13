@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+
+  --gray-300: #CCCCCC;
+  --gray-500: #DDDDDD;
+  --gray-600: #777777;
+  --gray-700: #999999;
+
+  --blue: #7695EC;
+
+  --green: #47B960;
+
+  --red: #FF5151;
+}
+
+body {
+  background: var(--gray-500);
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem Roboto, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
