@@ -9,14 +9,14 @@ export function SignUpBox() {
 
   useEffect(() => {
     if (storedUsername) {
-      navigate('/dashboard')
+      navigate('/mainScreen')
     }
   }, [navigate, storedUsername])
 
   function handleSignIn() {
     localStorage.setItem('codeLeapNetwork username', JSON.stringify(username))
 
-    navigate('/dashboard')
+    navigate('/mainScreen')
   }
 
   return (
