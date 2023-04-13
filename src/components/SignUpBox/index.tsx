@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import './styles.scss'
 import { useNavigate } from 'react-router-dom'
+import './styles.scss'
 
 export function SignUpBox() {
   const [username, setUsername] = useState('')
-  const navigate = useNavigate()
   const storedUsername = localStorage.getItem('codeLeapNetwork username')
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (storedUsername) {
